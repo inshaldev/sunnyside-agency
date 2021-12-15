@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+@import url('./utilities.css');
+:root {
+  /* PRIMARY */
+  --soft-red: hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
+  --desat-cyan: hsl(167, 40%, 24%); /* GRAPHIC DESIGN TEXT */
+  --dark-blue: hsl(198, 62%, 26%); /* PHOTOGRAPHY TEXT */
+  --dark-cyan: hsl(168, 34%, 41%); /* FOOTER TEXT */
+
+  /* NEUTRAL */
+  --desaturated-blue: hsl(212, 27%, 19%);
+  --very-dark-grayish-blue: hsl(200, 11%, 5%);
+  --dark-grayish-blue: hsl(232, 10%, 55%);
+  --grayish-blue: hsl(210, 4%, 67%);
+  --white: hsl(0, 0%, 100%);
+
+  /* TYPOGRAPHY */
+  --barlow: 'Barlow', sans-serif;
+  --fraunces: 'Fraunces', sans-serif;
+  --xl: 3rem;
+  --l: 2.5rem;
+  --m: 2.25rem;
+  --s: 1.5rem;
+  --xs: 1.25rem;
+  --xxs: 1rem;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: var(--very-dark-grayish-blue);
+  font-size: 18px;
+}
+h1 {
+  font-family: var(--fraunces);
+  font-size: var(--l);
+  font-weight: 900;
+}
+h2 {
+  font-family: var(--fraunces);
+  font-size: var(--m);
+  font-weight: 700;
+}
+p {
+  font-family: var(--barlow);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.6;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  font-family: var(--barlow);
+  font-weight: 600;
+}
+li {
+  list-style: none;
+}
+main {
+  min-height: 100vh;
+}
+.none {
+  display: none;
+}
+
+/**********
+  HEADER
+**********/
+header {
+  position: absolute;
+  padding: 24px 18px;
+  width: 100%;
+  height: 80px;
+}
+header > .flex {
+  justify-content: space-between;
+}
+.container {
+  width: 100%;
+  min-height: 100%;
+}
+.header_menu_icon {
+  cursor: pointer;
+  width: 32px;
+}
+.header_menu_icon span {
+  margin: 4px;
+  display: block;
+  border: 1px solid white;
+}
+
+nav {
+  background-color: transparent;
+
+  margin-top: 80px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.nav_list {
+  color: var(--dark-grayish-blue);
+  background-color: white;
+  width: 90%;
+  padding: 2.5rem 0;
+}
+.nav_link {
+  border-radius: 50px;
+  padding: 1rem 2rem;
+}
+.contact {
+  color: var(--very-dark-grayish-blue);
+  background-color: var(--yellow);
+  font-family: var(--fraunces);
+  margin-top: 1rem;
+  padding: 1.5rem 2.5rem;
+}
+
+/**********
+   HERO
+**********/
+.hero {
+  background-image: url('./images/mobile/image-header.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  padding-top: 80px;
+}
+.hero_heading {
+  color: var(--white);
+  font-size: var(--xl);
+  letter-spacing: 8px;
+  text-align: center;
+}
+/* .hero_scroll_icon {
+  margin: auto;
+} */
+
+/*****************
+   MAIN SECTIONS
+******************/
+.main-grid {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: auto;
+}
+.main_grid img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.main_transform,
+.main_standout {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+.main_transform p,
+.main_standout p {
+  color: var(--dark-grayish-blue);
+  margin: 2rem 0;
+}
+.main_transform a,
+.main_standout a {
+  font-size: var(--xs);
+  font-family: var(--fraunces);
+}
+
+.main_gd,
+.main_pg {
+  position: relative;
+}
+.main_gd_content,
+.main_pg_content {
+  color: var(--desat-cyan);
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  padding: 2rem 2rem;
+  text-align: center;
+}
+
+.main_gd_content p,
+.main_pg_content p {
+  margin: 2rem 0;
+}
+
+.main_pg_content {
+  color: var(--dark-blue);
+}
+/************************
+   TESTIMONIALS SECTION
+*************************/
+.testimonials {
+  padding: 1rem 2rem;
+  text-align: center;
+}
+.testimonials_heading {
+  color: var(--grayish-blue);
+  font-size: var(--xs);
+  letter-spacing: 4px;
+  margin: 2rem 0 4rem 0;
+}
+.client {
+  margin: 3rem 0;
+}
+.client_pic {
+  border-radius: 50%;
+  width: 72px;
+}
+.client_msg {
+  color: var(--dark-grayish-blue);
+  margin: 2rem 0;
+}
+.client_name {
+  font-size: var(--s);
+}
+.client_title {
+  color: var(--grayish-blue);
+  font-size: var(--xxs);
+}
+
+/************************
+    LAST GRID SECTION
+*************************/
+.last_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0;
+}
+.last_grid img {
+  object-fit: cover;
+  width: 100%;
+}
+@media only screen and (min-width: 1080px) {
+  .hero {
+    background-image: url('./images/desktop/image-header.jpg');
+  }
+}
